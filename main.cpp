@@ -3,19 +3,19 @@
 To Display a Large Comment 
 */
 #include <iostream>
-
-//Function Declaration
-void helloWorld();
-void input_output();
+#include "main.h" //function declarations in the header file
 
 //Main Function
 int main(){
 
     //Initiate function
-    //helloWorld();
+    helloWorld();
     input_output();
 
 }
+
+
+//Function Definitions
 
 //Function prints Hello World
 void helloWorld(){
