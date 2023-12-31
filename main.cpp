@@ -4,14 +4,15 @@ To Display a Large Comment
 */
 #include <iostream>
 #include "main.h" //function declarations in the header file
+#include <cmath>
 
 //Main Function
 int main(){
 
     //Initiate function
-    helloWorld();
-    input_output();
-
+    //helloWorld();
+    //input_output();
+    power();
 }
 
 
@@ -35,6 +36,23 @@ void input_output(){
     
 }
 
+//Power function
+double power(){
 
+    double result = 1;
+    int base, exponent;
+
+    std::cout << "Enter the base: " << std::endl;
+    std::cin >> base;
+    std::cout << "Enter the exponent: " << std::endl;
+    std::cin >> exponent;
+    
+    for(int i = 0; i < exponent; i++){
+        result *= base;
+    }
+
+    std::cout << result;
+
+}
 
 
