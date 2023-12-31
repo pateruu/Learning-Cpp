@@ -2,13 +2,14 @@
 
 //Function Declaration
 void helloWorld();
-
+void input_output();
 
 //Main Function
 int main(){
 
     //Initiate function
-    helloWorld();
+    //helloWorld();
+    input_output();
 
 }
 
@@ -19,6 +20,15 @@ void helloWorld(){
 
 }
 
+//Function that uses Input/Output
+void input_output(){
 
+    int number{};
+
+    std::cout << "Please enter a number:" << std::endl;
+    std::cin >> number;
+    std::cout << "The number you entered was: " << number << "." << std::endl;
+    
+}
 
 
