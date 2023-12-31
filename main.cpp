@@ -7,6 +7,7 @@ void helloWorld();
 //Main Function
 int main(){
 
+    //Initiate function
     helloWorld();
 
 }
@@ -17,3 +18,7 @@ void helloWorld(){
     std::cout << "Hello World\n";
 
 }
+
+
+
+
