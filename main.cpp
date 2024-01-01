@@ -16,19 +16,21 @@ int main(){
     //intDataType();
     //charDataType();
     //escapeSequence();
+    //boolDataType();
+    //floatingPointDataType();
+    constants();
 }
-
 
 //Function Definitions
 
-//Function prints Hello World
+//Function prints Hello World.
 void helloWorld(){
 
     std::cout << "Hello World\n";
 
 }
 
-//Function that uses Input/Output
+//Function that uses Input/Output.
 void input_output(){
 
     int number{};
@@ -39,7 +41,7 @@ void input_output(){
     
 }
 
-//Power function
+//Power function.
 void power(){
 
     double result = 1;
@@ -58,6 +60,7 @@ void power(){
 
 }
 
+//Function explaining the int Data Type.
 void intDataType(){
 
 /*
@@ -82,6 +85,7 @@ std::cout << sizeof(long long) << std::endl;
 
 }
 
+//Function explaining the character Data Type.
 void charDataType(){
 
 //use single quotes for characters.
@@ -91,7 +95,7 @@ void charDataType(){
 
 }
 
-
+//Function explaining various escape sequences.
 void escapeSequence(){
 
     std::cout << "Hello\tThere" << std::endl;  //a tab.
@@ -101,5 +105,35 @@ void escapeSequence(){
     std::cout << "Hello\\ There"; //a backslash.
     std::cout << "Hello There\0"; //null terminating character. Indicating the end of a C style string.
 }
+
+//Function explaining the bool Data Type
+void boolDataType(){
+
+    bool pizza_is_good = 0; //0 is False, and 1 is True
+    bool cheese_is_good = true; //True or False
+
+    bool found = false;
+    std::cout << found << std::endl;
+    std::cout << std::boolalpha << found << std::endl;  //print it out as a false or true.
+
+}
+
+//Function explaining the floating point Data Type
+void floatingPointDataType(){
+
+    //There are three types of floating point numbers.
+    float a;  //with large sig figs, it gets inaccurate. (Good to 6 sig figs)
+    double b; //more better with a larger amount of sig figs. (Good to 16 sig figs)
+    long double c; //(Good to 18 sig figs)
+
+}
+
+void constants(){
+
+
+
+
+}
+
 
 

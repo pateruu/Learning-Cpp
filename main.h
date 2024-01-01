@@ -5,3 +5,6 @@ void power();
 void intDataType();
 void charDataType();
 void escapeSequence();
+void boolDataType();
+void floatingPointDataType();
+void constants();
