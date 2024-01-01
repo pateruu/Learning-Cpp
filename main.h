@@ -8,3 +8,6 @@ void escapeSequence();
 void boolDataType();
 void floatingPointDataType();
 void constants();
+void numericFunctions();
+void strings();
+void userInputForStrings();
