@@ -11,3 +11,6 @@ void constants();
 void numericFunctions();
 void strings();
 void userInputForStrings();
+void stringModifierMethods();
+void ifStatments_Operators();
+void switchStatements();

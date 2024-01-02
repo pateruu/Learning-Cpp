@@ -21,7 +21,11 @@ int main(){
     //constants();
     //numericFunctions();
     //strings();
-    userInputForStrings();
+    //userInputForStrings();
+    //stringModifierMethods();
+    //ifStatments_Operators();
+    //switchStatements();
+
 }
 
 //Function Definitions
@@ -138,7 +142,6 @@ void constants(){
     const int x = 5;  //a symbolic constant.
 
     enum{ y = 100 };
-
 }
 
 //Numeric Functions.
@@ -160,7 +163,6 @@ void numericFunctions(){
     std::cout << floor(3.25) << std::endl; //floor rounds down.
     std::cout << trunc(3.25) << std::endl; //trunc rounds down as well. Diff between trunc and floor is in the negative values.
     std::cout << round(3.25) << std::endl; //rounds to the closest value.
-
 }
 
 //Shows some things that you can do with strings.
@@ -180,7 +182,6 @@ void strings(){
 
     //C style string
     char name[] = "Caleb"; // C string == array of characters == "Caleb\0" Basically has 6 characters and cannot be assigned a value larger than that. 
-
 }
 
 //Shows how to get a sentence for the user input.
@@ -192,7 +193,127 @@ void userInputForStrings(){
 
     getline(std::cin, greeting); //if you want to get a string input from user.
     std::cout << greeting << std::endl;
-
 }
+
+//Some string modifiers that you can use.
+void stringModifierMethods(){
+
+    std::string greeting = "Hello";
+    std::string greeting2 = "What is the mealplan?";
+    
+    //Part1
+    std::cout << greeting.length() << std::endl; //gives back length of the string
+    std::cout << greeting.size() << std::endl; //same to length
+
+    greeting += " there"; //to append
+    greeting.append(" there!"); //to append
+
+    greeting.insert(3, " "); //at position 3 insert the following.
+    
+    greeting.erase(3, 1); //to go into a string at the first value, then erase the amount mentioned as the second value. If no second value,then it removes everything after the specified position. (3)
+    
+    greeting.erase(greeting.length() - 1); //index starts at 0, so it will get rid of the last character.
+    greeting.pop_back(); //to get rid of the last character.
+    
+    greeting.replace(0, 4, "Heaven"); //delete the first four characters and replace it with heaven. Start at 0, delete 4 chars. Add heaven.
+
+    //Part2
+    greeting2.replace(greeting2.find("the"), 3, "our"); //finds "the", then adds a 3 character string "our"
+    std::cout << greeting2.substr(5, 2) << std::endl; //if you want to pull out a certain part of a string.
+    std::cout << greeting2.find_first_of("aeiou") << std::endl; //it finds the first of something in the string. Outputs 2, because first vowel is at position 2.
+    std::cout << greeting2;
+}
+
+//If statements & Operators
+void ifStatments_Operators(){
+
+    //If statement
+    int age;
+    std::cout << "How old are you?";
+    std::cin >> age;
+
+    if(age < 13){
+
+        std::cout << "You are not old enough\n";
+
+    } else{
+        std::cout << "You are old enough\n";
+    }
+
+    //Operators
+/*
+
+    Comparison:
+    ==   - Is equal to
+    !=   - Is not equal to
+    < >  - less than, greater than
+    <= >= - Less than or equal to, greater than or equal to
+
+    Logical:
+    &&   - and
+    ||   - or
+    !(age == name) - not operator
+*/
+}
+
+//Switch Statements
+void switchStatements(){
+
+    //Switch example
+    int age;
+    std::cout << "What is your age?";
+    std::cin >> age;
+    
+    switch(age) //type has to be an integer. Double does not work.
+    {
+        case 13:
+            std::cout << "You are 13\n";
+            break; //you can also use return 0;
+        case 14:
+            std::cout << "You are 14\n";
+            break;
+        default:
+            std::cout << "Catch all\n";
+            break;
+
+    }
+
+    //Enum Use
+    enum season{summer, spring, fall, winter};
+    season now = winter;
+    
+    switch(now){
+
+        case summer:
+            break;
+        case spring:
+            break;
+        case fall:
+            break;
+        case winter:
+        std::cout << "Stay warm!\n";
+            break;
+
+    }
+
+    //Enum Use with class
+    enum class seasons{summer, spring, fall, winter};
+    seasons after = seasons::winter;
+    
+    switch(after){
+
+        case seasons::summer:
+            break;
+        case seasons::spring:
+            break;
+        case seasons::fall:
+            break;
+        case seasons::winter:
+            std::cout << "Stay warm!\n";
+            break;
+
+    }
+}
+
 
 
