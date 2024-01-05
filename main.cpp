@@ -5,6 +5,7 @@ To Display a Large Comment
 #include <iostream>
 #include "main.h" //function declarations in the header file
 #include <cmath>
+#include <vector>
 
 //Main Function
 int main(){
@@ -25,6 +26,10 @@ int main(){
     //stringModifierMethods();
     //ifStatments_Operators();
     //switchStatements();
+    //loops();
+    //arrays();
+    //print_array();
+
 
 }
 
@@ -316,4 +321,85 @@ void switchStatements(){
 }
 
 
+void loops(){
 
+    //For Loop
+    for(int i = 0; i < 10; i++){
+
+        std::cout << i << std::endl;
+    }
+
+    //While loop
+    int k = 10;
+    while(k >= 0){
+
+        std::cout << k << std::endl;
+        k--;
+    }
+
+    //Do While Loops
+    std::string password = "Hellotacos123";
+    std::string guess;
+    do{
+        std::cout << "Guess the password:";
+        std::cin >> guess;
+
+    } while(guess != password);
+    
+    //Break and Continue Statements
+    //Break basically exits out of the current loop.
+    //Continue makes it go to the next iteration in the loop.
+
+    //Conditional Operator
+    /* 
+    guess == answer ? (enter what to do if true) : (Enter what to do if false);
+
+    example: guess == answer ? 10 : 0;
+    */
+}
+
+
+void arrays(){
+/*
+    //Arrays
+    int guesses[] = {10, 13, 54, 42, 12, 13};
+    std::cout << guesses[3] << std::endl;
+    guesses[3] = 300;
+
+    int choices[20];
+    choices[0] = 10;
+    std::cin >> choices[0];
+    std::cout << choices[0] << std::endl;
+*/
+    //For function below.
+    int guesses[] = {12, 43, 23, 43, 23};
+    int size = sizeof(guesses) / sizeof(int);
+    print_array(guesses, size);
+
+     
+
+}
+
+//Function for above arrays function.
+void print_array(int array[], int size){
+    //int size needs to be added because usually when sending array to function, it loses its size value so sizeof() cannot be used within the function.
+    for(int i=0; i < size; i++){
+
+        std::cout << array[i] << "\t";
+
+    }
+    std::cout << std::endl;
+}
+
+
+void vectors(){
+    #include <vector>
+    //Format is: std::vector<int> name = {}
+    //you can add things to vector by using: items.push_back(100);
+
+    std::vector<int> data = {1, 2, 3};
+    data.push_back(12);
+    std::cout << data[3] << std::endl;
+
+}
+//Skipped a few lesson. Moving to intro to OOP. See new files for structs... etc.

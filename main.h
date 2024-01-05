@@ -14,3 +14,7 @@ void userInputForStrings();
 void stringModifierMethods();
 void ifStatments_Operators();
 void switchStatements();
+void loops();
+void arrays();
+void print_array();
+void vectors();
