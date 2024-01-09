@@ -6,26 +6,55 @@
 class User{
 
   std::string status = "Gold";
-
+  static int user_count;
 
   public:
-  std::string first_name;
-  std::string last_name;
- std::string get_status()
-  {
-    return status;  
-  }
+
+    static int get_user_count(){
+      return user_count;
+    }
+
+    std::string first_name;
+    std::string last_name;
+    
+    std::string get_status(){
+      return status;  
+    }
+    
+    void set_status(std::string status){
+      if(status == "Gold" || status == "Silver" || status == "Bronze"){
+        this->status = status;
+      } else{
+        this->status = status;
+      }
+    }
+    
+    User(){
+      user_count++;
+    }
+    
+    User(std::string first_name, std::string last_name){
+      
+      this->first_name = first_name;
+      this->last_name = last_name;
+      this->status = status;
+      user_count++;
+    }
+    
+    ~User(){
+      std::cout << "Deconstructor" << std::endl;
+      user_count--;
+    }
 
 
 };
 
+int User::user_count = 0;
+
 int main(){
 
-  User user;
-  user.first_name = "Kevin";
+  User user, user1, user2;
+  std::cout << User::get_user_count() << std::endl;
 
-  std::vector<User> users;
-  users.push_back(user);
 
-  return 0;
 }
